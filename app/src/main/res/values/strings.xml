@@ -1,9 +1,19 @@
 <resources>
-    <string name="app_name">108Parshvnath</string>
+
+    <string name="app_name">108 Parshvanath Temples</string>
+
+    //Navigation Drawer
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header">Welcome to the 108 Parshvanath Temples</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+
+    // menu/main.xml
+    <string name="search">Search</string>
+
+    //activity_main_drawer.xml
+    <string name="communicate">Communicate</string>
+    <string name="share">Share</string>
+    <string name="send">Send</string>
+
 </resources>
