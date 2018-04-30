@@ -8,12 +8,15 @@
     <string name="nav_header">Welcome to the 108 Parshvanath Temples</string>
     <string name="nav_header_desc">Navigation header</string>
 
-    // menu/main.xml
+    //menu/main.xml
     <string name="search">Search</string>
 
     //activity_main_drawer.xml
     <string name="communicate">Communicate</string>
     <string name="share">Share</string>
     <string name="send">Send</string>
+
+    //list_item.xml
+    <string name="templeImage">Temple Image</string>
 
 </resources>

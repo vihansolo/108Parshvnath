@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,4 +9,15 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-</android.support.constraint.ConstraintLayout>
+    <ListView
+        android:id="@+id/mainListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:divider="#444444"
+        android:dividerHeight="0.5dp"
+        android:transcriptMode="alwaysScroll"
+        tools:listitem="@layout/list_item" />
+
+</RelativeLayout>
