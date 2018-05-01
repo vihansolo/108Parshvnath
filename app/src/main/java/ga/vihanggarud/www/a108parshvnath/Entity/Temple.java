@@ -3,6 +3,8 @@ package ga.vihanggarud.www.a108parshvnath.Entity;
 public class Temple {
 
     private String templeName;
+    private double lati;
+    private double longi;
     private String templeAddress;
     private String templeImageURI;
     private String templePhone;
@@ -10,8 +12,10 @@ public class Temple {
     public Temple() {
     }
 
-    public Temple(String templeName, String templeAddress, String templeImageURI, String templePhone) {
+    public Temple(String templeName, double lati, double longi, String templeAddress, String templeImageURI, String templePhone) {
         this.templeName = templeName;
+        this.lati = lati;
+        this.longi = longi;
         this.templeAddress = templeAddress;
         this.templeImageURI = templeImageURI;
         this.templePhone = templePhone;
@@ -23,6 +27,22 @@ public class Temple {
 
     public void setTempleName(String templeName) {
         this.templeName = templeName;
+    }
+
+    public double getLati() {
+        return lati;
+    }
+
+    public void setLati(double lati) {
+        this.lati = lati;
+    }
+
+    public double getLongi() {
+        return longi;
+    }
+
+    public void setLongi(double longi) {
+        this.longi = longi;
     }
 
     public String getTempleAddress() {
