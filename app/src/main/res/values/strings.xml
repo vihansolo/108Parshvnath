@@ -19,4 +19,9 @@
     //list_item.xml
     <string name="templeImage">Temple Image</string>
 
+    //activity_temple_place.xml
+    <string name="templeName">Temple Name</string>
+    <string name="templeAddress">Temple Address</string>
+    <string name="map_button">View on Map</string>
+
 </resources>
