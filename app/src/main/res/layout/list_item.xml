@@ -28,6 +28,6 @@
         android:paddingBottom="30sp"
         android:gravity="start|center"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        tools:text="Message" />
+        tools:text="Temple Name" />
 
 </LinearLayout>
