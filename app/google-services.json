@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "936970768831",
+    "firebase_url": "https://parshvnath-c8f25.firebaseio.com",
+    "project_id": "parshvnath-c8f25",
+    "storage_bucket": "parshvnath-c8f25.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936970768831:android:6d91481c52d917a5",
+        "android_client_info": {
+          "package_name": "ga.vihanggarud.www.a108parshvnath"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936970768831-vkpujp85hfpf84slulfdbnpabsfgkldf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ga.vihanggarud.www.a108parshvnath",
+            "certificate_hash": "880dac6c38e516de681090ab44c763eff3e8b57d"
+          }
+        },
+        {
+          "client_id": "936970768831-rhjqin17se50bfnr8bnp5lq1jm18r60u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaKrpkv-uL_d8FcGi2FJ_NGi9MUcxFbmU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936970768831-rhjqin17se50bfnr8bnp5lq1jm18r60u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
