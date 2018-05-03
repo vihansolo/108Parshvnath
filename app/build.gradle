@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 27
@@ -38,3 +37,5 @@ dependencies {
 
     implementation 'com.android.support:cardview-v7:27.1.1'
 }
+
+apply plugin: 'com.google.gms.google-services'
