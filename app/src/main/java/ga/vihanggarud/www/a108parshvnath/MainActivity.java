@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -27,10 +28,6 @@ import java.util.List;
 import ga.vihanggarud.www.a108parshvnath.Entity.Temple;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
-    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("temples");
-    ListView templeListView = findViewById(R.id.templeListView);
-    List<Temple> temples = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +48,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //Initializing elements
+
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("temples");
+        ListView templeListView = findViewById(R.id.templeListView);
+        final List<Temple> temples = new ArrayList<>();
 
         //Getting Database Items
 
@@ -75,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //Setting Current Activity Items
 
-        ItemAdapter itemAdapter = new ItemAdapter(this, R.layout.list_item, temples);
+        final ItemAdapter itemAdapter = new ItemAdapter(this, R.layout.list_item, temples);
         templeListView.setAdapter(itemAdapter);
 
         databaseReference.addChildEventListener(new ChildEventListener() {
@@ -83,7 +86,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
+                Temple temple = dataSnapshot.getValue(Temple.class);
 
+                itemAdapter.add(temple);
             }
 
             @Override
