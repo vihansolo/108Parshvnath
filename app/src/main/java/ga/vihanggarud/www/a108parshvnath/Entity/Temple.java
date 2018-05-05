@@ -3,22 +3,20 @@ package ga.vihanggarud.www.a108parshvnath.Entity;
 public class Temple {
 
     private String templeName;
-    private double lati;
-    private double longi;
+    private double latitude;
+    private double longitude;
     private String templeAddress;
     private String templeImageURI;
-    private String templePhone;
 
     public Temple() {
     }
 
-    public Temple(String templeName, double lati, double longi, String templeAddress, String templeImageURI, String templePhone) {
+    public Temple(String templeName, double latitude, double longitude, String templeAddress, String templeImageURI) {
         this.templeName = templeName;
-        this.lati = lati;
-        this.longi = longi;
+        this.latitude = latitude;
+        this.longitude = longitude;
         this.templeAddress = templeAddress;
         this.templeImageURI = templeImageURI;
-        this.templePhone = templePhone;
     }
 
     public String getTempleName() {
@@ -29,20 +27,20 @@ public class Temple {
         this.templeName = templeName;
     }
 
-    public double getLati() {
-        return lati;
+    public double getLatitude() {
+        return latitude;
     }
 
-    public void setLati(double lati) {
-        this.lati = lati;
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
     }
 
-    public double getLongi() {
-        return longi;
+    public double getLongitude() {
+        return longitude;
     }
 
-    public void setLongi(double longi) {
-        this.longi = longi;
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 
     public String getTempleAddress() {
@@ -59,13 +57,5 @@ public class Temple {
 
     public void setTempleImageURI(String templeImageURI) {
         this.templeImageURI = templeImageURI;
-    }
-
-    public String getTemplePhone() {
-        return templePhone;
-    }
-
-    public void setTemplePhone(String templePhone) {
-        this.templePhone = templePhone;
     }
 }

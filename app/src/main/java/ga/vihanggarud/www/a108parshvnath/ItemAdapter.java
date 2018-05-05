@@ -1,9 +1,12 @@
 package ga.vihanggarud.www.a108parshvnath;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -16,29 +19,49 @@ import ga.vihanggarud.www.a108parshvnath.Entity.Temple;
 
 public class ItemAdapter extends ArrayAdapter<Temple> {
 
-    public ItemAdapter(@NonNull Context context, int resource, @NonNull List<Temple> objects) {
+    private Context context;
+
+    ItemAdapter(@NonNull Context context, int resource, @NonNull List<Temple> objects) {
+
         super(context, resource, objects);
+        this.context = context;
     }
 
+    public class ViewHolder {
+
+        ImageView templeImage;
+        TextView templeName;
+    }
+
+    @SuppressLint("InflateParams")
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
+        ViewHolder holder = null;
+        Temple temple = getItem(position);
+
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+
         if (convertView == null) {
 
-            convertView = ((Activity) getContext()).getLayoutInflater().inflate(R.layout.list_item, parent, false);
+            assert inflater != null;
+            convertView = inflater.inflate(R.layout.list_item, null);
+
+            holder = new ViewHolder();
+
+            holder.templeName = convertView.findViewById(R.id.itemText);
+            holder.templeImage = convertView.findViewById(R.id.itemImage);
+
+            convertView.setTag(holder);
         }
 
-        ImageView itemImage = convertView.findViewById(R.id.itemImage);
-        TextView itemText = convertView.findViewById(R.id.itemText);
+        else
+            holder = (ViewHolder) convertView.getTag();
 
-        Temple values = getItem(position);
-
-        itemText.setVisibility(View.VISIBLE);
-        itemImage.setVisibility(View.VISIBLE);
-
-        assert values != null;
-        itemText.setText(values.getTempleName());
+        assert temple != null;
+        holder.templeName.setText(temple.getTempleName());
+        holder.templeImage.setImageURI(Uri.parse(temple.getTempleImageURI()));
 
         return convertView;
     }
