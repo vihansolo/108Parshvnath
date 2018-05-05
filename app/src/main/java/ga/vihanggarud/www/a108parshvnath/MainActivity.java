@@ -9,11 +9,13 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.support.v7.widget.SearchView;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -27,6 +29,13 @@ import java.util.List;
 import ga.vihanggarud.www.a108parshvnath.Entity.Temple;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("temples");
+    ListView templeListView;
+
+    List<Temple> temples = new ArrayList<>();
+
+    ItemAdapter itemAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +59,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //Initializing elements
 
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("temples");
-        ListView templeListView = findViewById(R.id.templeListView);
-        final List<Temple> temples = new ArrayList<>();
+        templeListView = findViewById(R.id.templeListView);
 
         //Getting Database Items
 
@@ -77,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //Setting Current Activity Items
 
-        final ItemAdapter itemAdapter = new ItemAdapter(this, R.layout.list_item, temples);
+        itemAdapter = new ItemAdapter(this, R.layout.list_item, temples);
         templeListView.setAdapter(itemAdapter);
 
         databaseReference.addChildEventListener(new ChildEventListener() {
@@ -133,6 +140,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+
+        MenuItem searchItem = menu.findItem(R.id.search);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+
+                if (TextUtils.isEmpty(newText)) {
+
+                    itemAdapter.getFilter().filter("");
+                    templeListView.clearTextFilter();
+                }
+
+                else
+                    itemAdapter.getFilter().filter(newText);
+
+                return true;
+            }
+        });
+
         return true;
     }
 
