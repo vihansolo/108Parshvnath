@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.maps.model.LatLng;
 
-public class TemplePlace extends AppCompatActivity {
+public class TempleDetails extends AppCompatActivity {
 
     LatLng latLng;
     ImageView templeImage;
@@ -23,7 +23,7 @@ public class TemplePlace extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_temple_place);
+        setContentView(R.layout.activity_temple_details);
 
         templeName = findViewById(R.id.templeName);
         templeImage = findViewById(R.id.templeImage);

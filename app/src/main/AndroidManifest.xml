@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TemplePlace"
+            android:name=".TempleDetails"
             android:screenOrientation="portrait" />
     </application>
 
