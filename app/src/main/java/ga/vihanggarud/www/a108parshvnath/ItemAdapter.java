@@ -13,6 +13,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 import ga.vihanggarud.www.a108parshvnath.Entity.Temple;
@@ -61,7 +63,9 @@ public class ItemAdapter extends ArrayAdapter<Temple> {
 
         assert temple != null;
         holder.templeName.setText(temple.getTempleName());
-        holder.templeImage.setImageURI(Uri.parse(temple.getTempleImageURI()));
+        Glide.with(holder.templeImage.getContext())
+                .load(temple.getTempleImageURI())
+                .into(holder.templeImage);
 
         return convertView;
     }

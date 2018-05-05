@@ -24,6 +24,7 @@ public class TempleDetails extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_temple_details);
 
@@ -38,8 +39,6 @@ public class TempleDetails extends AppCompatActivity {
         name = intent.getStringExtra("templeName");
         address = intent.getStringExtra("templeAddress");
         imageURI = intent.getStringExtra("templeImageURI");
-
-        imageURI = imageURI.substring(1,imageURI.length());
 
         Glide.with(templeImage.getContext())
                 .load(imageURI)
