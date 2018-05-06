@@ -15,6 +15,7 @@
     <string name="communicate">Communicate</string>
     <string name="share">Share</string>
     <string name="send">Send</string>
+    <string name="about_us">About Us</string>
 
     //list_item.xml
     <string name="templeImage">Temple Image</string>
