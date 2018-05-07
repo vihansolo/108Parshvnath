@@ -6,15 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
     tools:context=".TempleDetails">
 
     <ImageView
         android:id="@+id/templeImage"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
+        android:layout_weight="4"
         android:layout_marginTop="27dp"
         android:contentDescription="@string/templeImage"
+        android:background="@android:color/background_dark"
         app:srcCompat="@drawable/ic_launcher_background"
         tools:ignore="VectorDrawableCompat" />
 
@@ -24,10 +26,11 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:gravity="center"
+        android:background="@android:color/white"
         android:hint="@string/templeName" />
 
     <TextView
@@ -36,21 +39,25 @@
         android:layout_height="0dp"
         android:layout_weight="3"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:gravity="center"
+        android:background="@android:color/white"
         android:hint="@string/templeAddress" />
 
     <Button
         android:id="@+id/gMap"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_gravity="center"
-        android:layout_marginBottom="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
         android:onClick="onViewOnMapClicked"
+        android:background="#e0e0e0"
         android:text="@string/map_button" />
 
 </LinearLayout>
