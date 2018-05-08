@@ -31,6 +31,7 @@
         android:layout_marginEnd="15dp"
         android:gravity="center"
         android:background="@android:color/white"
+        android:textColor="@android:color/background_dark"
         android:hint="@string/templeName" />
 
     <TextView
@@ -44,13 +45,14 @@
         android:layout_marginEnd="15dp"
         android:gravity="center"
         android:background="@android:color/white"
+        android:textColor="@android:color/background_dark"
         android:hint="@string/templeAddress" />
 
     <Button
         android:id="@+id/gMap"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.8"
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"
         android:layout_marginTop="20dp"
