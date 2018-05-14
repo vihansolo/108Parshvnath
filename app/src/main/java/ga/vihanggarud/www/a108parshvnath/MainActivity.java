@@ -201,10 +201,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setType("text/plain");
 
-            String subject = "108 Parshvanath App";
-            String body = "Get it now on play store : http://play.google.com/store/apps/details?id=ga.vihanggarud.www.a108parshvnath";
+            String body = "108 Parshvanath Temples App \n\nGet it now on play store : http://play.google.com/store/apps/details?id=ga.vihanggarud.www.a108parshvnath";
 
-            intent.putExtra(Intent.EXTRA_SUBJECT,subject);
             intent.putExtra(Intent.EXTRA_TEXT,body);
 
             startActivity(Intent.createChooser(intent, "Share via"));
