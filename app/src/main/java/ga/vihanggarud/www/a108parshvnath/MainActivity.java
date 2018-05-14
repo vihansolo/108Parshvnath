@@ -198,6 +198,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.nav_share) {
 
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+
+            String subject = "108 Parshvanath App";
+            String body = "Get it now on play store : http://play.google.com/store/apps/details?id=ga.vihanggarud.www.a108parshvnath";
+
+            intent.putExtra(Intent.EXTRA_SUBJECT,subject);
+            intent.putExtra(Intent.EXTRA_TEXT,body);
+
+            startActivity(Intent.createChooser(intent, "Share via"));
         }
 
         else if (id == R.id.nav_send) {
