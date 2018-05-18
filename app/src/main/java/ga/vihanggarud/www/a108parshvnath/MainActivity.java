@@ -201,7 +201,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setType("text/plain");
 
-            String body = "108 Parshvanath Temples App \n\nGet it now on play store : http://play.google.com/store/apps/details?id=ga.vihanggarud.www.a108parshvnath";
+            String body = "108 Parshvanath Temples App \n\n" +
+                    "Get it now on play store : http://play.google.com/store/apps/details?id=ga.vihanggarud.www.a108parshvnath";
 
             intent.putExtra(Intent.EXTRA_TEXT,body);
 
