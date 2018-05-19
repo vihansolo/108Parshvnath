@@ -3,7 +3,6 @@ package ga.vihanggarud.www.a108parshvnath;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -40,7 +39,7 @@ public class ItemAdapter extends ArrayAdapter<Temple> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        ViewHolder holder = null;
+        ViewHolder holder;
         Temple temple = getItem(position);
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
