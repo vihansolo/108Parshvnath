@@ -14,7 +14,7 @@
     //activity_main_drawer.xml
     <string name="communicate">Communicate</string>
     <string name="share">Share</string>
-    <string name="send">Send</string>
+    <string name="store">View on Play Store</string>
     <string name="about_us">About Us</string>
 
     //list_item.xml

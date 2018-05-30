@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(Intent.createChooser(intent, "Share via"));
         }
 
-        else if (id == R.id.nav_send) {
+        else if (id == R.id.nav_store) {
 
             try {
 
