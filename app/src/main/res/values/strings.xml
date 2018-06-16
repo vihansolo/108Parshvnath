@@ -30,6 +30,6 @@
     <string name="map_button">View on Map</string>
 
     //activity_nearby_places.xml
-    <string name="places_within_10km">Places Within 10km radius</string>
+    <string name="places_within_10km">Temples Within 10km radius</string>
 
 </resources>

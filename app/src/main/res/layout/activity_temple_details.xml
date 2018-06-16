@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4"
-        android:layout_marginTop="25dp"
         android:contentDescription="@string/templeImage"
         android:background="@android:color/white"
         app:srcCompat="@drawable/ic_launcher_background"
