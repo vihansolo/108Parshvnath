@@ -2,5 +2,6 @@
 <resources>
     <color name="colorPrimary">#FF851C</color>
     <color name="colorPrimaryDark">#E26D09</color>
+    <color name="statusBar">#C65F07</color>
     <color name="colorAccent">#000000</color>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="ga.vihanggarud.www.a108parshvnath">
 
@@ -29,9 +28,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <meta-data android:name="android.app.searchable"
+            <meta-data
+                android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
-
         </activity>
         <activity
             android:name=".TempleDetails"
@@ -39,7 +38,7 @@
         <activity
             android:name=".AboutUs"
             android:screenOrientation="portrait" />
-
+        <activity android:name=".NearbyPlaces"></activity>
     </application>
 
 </manifest>

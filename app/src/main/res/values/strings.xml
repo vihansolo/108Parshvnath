@@ -10,6 +10,10 @@
 
     //menu/main.xml
     <string name="search">Search</string>
+    <string name="temples_near_you">Nearby Temples</string>
+
+    //menu/nearby_places.xml
+    <string name="back">Go Back</string>
 
     //activity_main_drawer.xml
     <string name="communicate">Communicate</string>
@@ -24,5 +28,8 @@
     <string name="templeName">Temple Name</string>
     <string name="templeAddress">Temple Address</string>
     <string name="map_button">View on Map</string>
+
+    //activity_nearby_places.xml
+    <string name="places_within_10km">Places Within 10km radius</string>
 
 </resources>
