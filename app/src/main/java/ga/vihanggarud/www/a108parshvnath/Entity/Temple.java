@@ -58,4 +58,10 @@ public class Temple {
     public void setTempleImageURI(String templeImageURI) {
         this.templeImageURI = templeImageURI;
     }
+
+    @Override
+    public String toString() {
+
+        return templeName;
+    }
 }
