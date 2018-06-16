@@ -29,7 +29,8 @@
         android:paddingTop="10sp"
         android:paddingBottom="30sp"
         android:gravity="start|center"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="20sp"
+        android:textColor="@android:color/background_dark"
         tools:text="Temple Name" />
 
 </LinearLayout>
