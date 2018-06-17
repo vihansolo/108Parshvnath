@@ -38,7 +38,9 @@
         <activity
             android:name=".AboutUs"
             android:screenOrientation="portrait" />
-        <activity android:name=".NearbyPlaces"></activity>
+        <activity
+            android:name=".NearbyPlaces"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
