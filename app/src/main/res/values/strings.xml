@@ -20,6 +20,7 @@
     <string name="share">Share</string>
     <string name="store">View on Play Store</string>
     <string name="about_us">About Us</string>
+    <string name="nearby_places">Nearby Places</string>
 
     //list_item.xml
     <string name="templeImage">Temple Image</string>
@@ -30,6 +31,7 @@
     <string name="map_button">View on Map</string>
 
     //activity_nearby_places.xml
-    <string name="places_within_10km">Temples Within 10km radius</string>
+    <string name="places_within_50km">Temples Within 50km radius</string>
+    <string name="no_nearby_temples_found">No Nearby Temples Found</string>
 
 </resources>

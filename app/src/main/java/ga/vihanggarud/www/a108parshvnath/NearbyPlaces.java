@@ -51,6 +51,7 @@ public class NearbyPlaces extends AppCompatActivity {
         getLocation();
 
         nearbyPlacesListView = findViewById(R.id.nearby_places_list);
+        nearbyPlacesListView.setEmptyView(findViewById(R.id.empty_nearby_places_list));
 
         nearbyPlacesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -86,7 +87,7 @@ public class NearbyPlaces extends AppCompatActivity {
 
                 double distance = getDistance(userLatitude,userLongitude,templeLatitude,templeLongitude);
 
-                if (distance < 10000)
+                if (distance < 50000)
                     itemAdapter.add(temple);
             }
 

@@ -11,9 +11,4 @@
         app:showAsAction="always|collapseActionView"
         app:actionViewClass="android.support.v7.widget.SearchView" />
 
-    <item
-        android:id="@+id/search_nearby"
-        android:title="@string/temples_near_you"
-        android:orderInCategory="100" />
-
 </menu>

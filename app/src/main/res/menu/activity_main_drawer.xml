@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
+    <item
+        android:id="@+id/nearby_places"
+        android:icon="@drawable/ic_pin_drop_black_24dp"
+        android:title="@string/nearby_places" />
+
     <item android:title="@string/communicate">
 
         <menu>
@@ -28,3 +33,5 @@
     </item>
 
 </menu>
+
+

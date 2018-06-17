@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,7 +15,7 @@
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
         android:background="@color/colorPrimaryDark"
-        android:text="@string/places_within_10km"
+        android:text="@string/places_within_50km"
         android:textSize="20sp"
         android:textColor="@android:color/white" />
 
@@ -26,5 +25,15 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/nearby_places_list_header"
         tools:listitem="@layout/list_item" />
+
+    <TextView
+        android:id="@+id/empty_nearby_places_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/no_nearby_temples_found"
+        android:textColor="#A8A8A8"
+        android:textSize="30sp" />
 
 </RelativeLayout>

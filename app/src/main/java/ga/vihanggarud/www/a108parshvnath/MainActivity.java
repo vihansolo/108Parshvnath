@@ -180,15 +180,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        //noinspection SimplifiableIfStatement
         if (id == R.id.search) {
 
             return true;
-        }
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.search_nearby) {
-
-            startActivity(new Intent(MainActivity.this, NearbyPlaces.class));
         }
 
         return super.onOptionsItemSelected(item);
@@ -212,6 +207,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             intent.putExtra(Intent.EXTRA_TEXT,body);
 
             startActivity(Intent.createChooser(intent, "Share via"));
+        }
+
+        else if (id == R.id.nearby_places) {
+
+            startActivity(new Intent(MainActivity.this, NearbyPlaces.class));
         }
 
         else if (id == R.id.nav_store) {
